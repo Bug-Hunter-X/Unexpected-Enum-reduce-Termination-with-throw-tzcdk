@@ -1,0 +1,3 @@
+# Elixir Enum.reduce and throw Unexpected Behavior
+
+This example demonstrates a potential issue when using `throw` within `Enum.reduce` in Elixir.  While `throw` works, the unexpected termination can make debugging more difficult. The code iterates through a list, adding each element to an accumulator unless it encounters the number 3.  If it encounters 3, it throws an error, stopping the function execution abruptly. This behavior may be unexpected for those accustomed to more controlled exception handling or functional paradigms.  A more robust solution is shown below. 
